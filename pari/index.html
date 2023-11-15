@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+
+    }
+    div{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .parent{
+        width: 60vh;
+        height: 60vh;
+        background-color: aquamarine;
+
+    }
+
+    .child{
+        height: 30vh;
+        width: 30vh;
+        background-color: aqua;
+    }
+    .change::after{
+        content: "naman";
+        animation: changetext 10s infinite linear;
+        color: #00b845;
+
+    }
+    @keyframes changetext {
+        0%{
+            content: "aastha";
+        }
+        25%{
+            content: "aashu";
+        }
+        45%{
+            content: "aniket";
+        }
+        80%{
+            content: "naina";
+        }
+        100%{
+            content: "aayu";
+        }
+    }
+    h1{
+        font-size: smaller;
+    }
+</style>
+<body>
+    
+        <div class="parent">
+            <div class="child">
+                <h1>hey there <span class="change"></span> here</h1>
+            </div>
+        </div>
+    
+</body>
+</html>
